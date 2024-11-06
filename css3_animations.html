@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:38 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css3_animations.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:14:31 GMT -->
 <head>
-<title>CSS Tutorial</title>
+<title>CSS Animations</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -133,6 +133,65 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<link rel="stylesheet" type="text/css" href="../browserref.css">
+<style> 
+#animated_div {
+width:70px;
+height:47px;
+background: #92B901;
+color: #ffffff;
+position: relative;
+font-weight:bold;
+font-size:20px;
+padding:10px;
+animation:animated_div 5s 1;
+-moz-animation:animated_div 5s 1;
+-webkit-animation:animated_div 5s 1;
+-o-animation:animated_div 5s 1;
+border-radius:5px;
+-webkit-border-radius:5px;
+}
+
+@keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50% {transform: rotate(0deg);left:500px;}
+55% {transform: rotate(0deg);left:500px;}
+70% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+
+@-webkit-keyframes animated_div
+{
+0% {-webkit-transform: rotate(0deg);left:0px;}
+25% {-webkit-transform: rotate(20deg);left:0px;}
+50% {-webkit-transform: rotate(0deg);left:500px;}
+55% {-webkit-transform: rotate(0deg);left:500px;}
+70% {-webkit-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {-webkit-transform: rotate(-360deg);left:0px;}
+}
+
+@-moz-keyframes animated_div
+{
+0%  {-moz-transform: rotate(0deg);left:0px;}
+25% {-moz-transform: rotate(20deg);left:0px;}
+50%  {-moz-transform: rotate(0deg);left:500px;}
+55%  {-moz-transform: rotate(0deg);left:500px;}
+70%  {-moz-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {-moz-transform: rotate(-360deg);left:0px;}
+}
+
+@-o-keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50%  {transform: rotate(0deg);left:500px;}
+55%  {transform: rotate(0deg);left:500px;}
+70%  {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -647,68 +706,195 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>CSS <span class="color_h1">Tutorial</span></h1>
+<h1>CSS <span class="color_h1">Animations</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
-</div>
-
-<div class="w3-panel w3-info intro">
-<div class="w3-row-padding">
-<div class="w3-col w3-hide-small" style="width:140px">
-<p style="margin-top:12px"><b style="position:relative;left:17px;font-size:25px;font-family:Arial Black, Verdana, serif">CSS</b><br>
-<i class="fa fa-css3" style="position:relative;left:-10px;font-size:100px;color:dodgerblue"></i></p>
-</div>
-<div class="w3-rest">
-<p>CSS is the language we use to style an HTML document.</p>
-<p>CSS describes how HTML elements should be displayed.</p>
-<p>This tutorial will teach you CSS from basic to advanced.</p>
-<a class="w3-btn w3-margin-bottom" href="css_intro.html">Start learning CSS now &raquo;</a>
-</div>
-</div>
+<a class="w3-left w3-btn" href="css3_transitions.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_tooltip.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Examples in Each Chapter</h2>
-<p>This CSS tutorial contains hundreds of CSS examples.</p>
-<p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+<h2>CSS Animations</h2>
+<p>CSS allows animation of HTML elements without using JavaScript or Flash!</p>
+<div id="animated_div">CSS</div>
+<p>In this chapter you will learn about the following properties:</p>
+<ul>
+<li><code class="w3-codespan">@keyframes</code></li>
+<li><code class="w3-codespan">animation-name</code></li>
+<li><code class="w3-codespan">animation-duration</code></li>
+  <li><code class="w3-codespan">animation-delay</code></li>
+  <li><code class="w3-codespan">animation-iteration-count</code></li>
+  <li><code class="w3-codespan">animation-direction</code></li>
+  <li><code class="w3-codespan">animation-timing-function</code></li>
+  <li><code class="w3-codespan">animation-fill-mode</code></li>
+  <li><code class="w3-codespan">animation</code></li>
+</ul>
+<hr>
 
+<h2>Browser Support for Animations</h2>
+<p>The numbers in the table specify the first browser version that fully supports the property.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+  <tr>
+    <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+    <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:15%;" class="bsSafari" title="Safari"></th>
+    <th style="width:15%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">@keyframes</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-name</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-duration</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-delay</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-iteration-count</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-direction</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-timing-function</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation-fill-mode</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">animation</td>
+    <td>43.0</td>
+    <td>10.0</td>
+    <td>16.0</td>
+    <td>9.0</td>
+    <td>30.0</td>
+  </tr>
+</table>
+</div>
+<hr>
+
+<h2>What are CSS Animations?</h2>
+<p>An animation lets an element gradually change from one style to another.</p>
+<p>You can change as many CSS properties you want, as many times you want.</p>
+<p>To use CSS animation, you must first specify some keyframes for the 
+animation.</p>
+<p>Keyframes hold what styles the element will have at certain times.</p>
+<hr>
+
+<h2>The @keyframes Rule</h2>
+<p>When you specify CSS styles inside the <code class="w3-codespan">@keyframes</code>
+rule, the animation will gradually change from the current style to the new style 
+at certain times.</p>
+<p>To get an animation to work, you must bind the animation to an element.</p>
+<p>The following example binds the &quot;example&quot; animation to the &lt;div&gt; element. 
+The animation will last for 4 seconds, and it will gradually change the 
+background-color of the &lt;div&gt; element from &quot;red&quot; to &quot;yellow&quot;:</p>
 <div class="w3-example">
-<h3>CSS Example</h3>
+<h3>Example</h3>
 <div class="w3-code notranslate cssHigh">
-body
-{<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
-<br>h1
-{<br>
-&nbsp;&nbsp;color: white;<br>
-&nbsp;&nbsp;text-align: center;<br>
-}<br><br>
-p
-{<br>
+/* The animation code */<br>
+@keyframes example {<br>
+&nbsp;&nbsp;from {background-color: red;}<br>
   &nbsp;
-font-family: verdana;<br>
-&nbsp;&nbsp;font-size: 20px;<br>
-}</div>
-<a target="_blank" href="tryit438d.html?filename=trycss_default" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
-<p><b>Click on the &quot;Try it Yourself&quot; button to see how it works.</b></p>
-
-<hr>
-<h2>CSS Examples</h2>
-<p>Learn from over 300 examples! With our editor, you can edit the CSS, and click on a
-button to view the result.</p>
-<p><a href="css_examples.html">Go to CSS Examples!</a></p>
-
-<hr>
-<h2>Use the Menu</h2>
-<p>We recommend reading this tutorial, in the sequence listed in the menu.</p>
-<p>If you have a large screen, the menu will always be present on the left.</p>
-<p>If you have a small screen, open the menu by clicking the top menu sign <span class="w3-xlarge">&#9776;</span>.</p>
-
-<hr><h2>CSS Templates</h2>
-<p>We have created some responsive W3.CSS templates for you to use.</p>
-<p>You are free to modify, save, share, and use them in all your projects.</p>
-<p><a href="css_rwd_templates.html">Free CSS Templates!</a></p>
-
+to {background-color: yellow;}<br>
+}<br><br>/* The element to apply the animation to */<br>
+div {<br>&nbsp; width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+background-color: red;<br>&nbsp;
+animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>
+}
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit4135.html?filename=trycss3_animation1">Try it Yourself &raquo;</a>
+</div>
+<p><b>Note:</b> The <code class="w3-codespan">animation-duration</code> property 
+defines how long time an animation should take to complete. If the <code class="w3-codespan">animation-duration</code> property is not specified, 
+no animation will occur, because 
+the default value is 0s (0 seconds).&nbsp;</p>
+<p>In the example above we have specified when the style will change by using 
+the keywords &quot;from&quot; and &quot;to&quot; (which represents 0% (start) and 100% (complete)).</p>
+<p>It is also possible to use percent. By using percent, you can add as many 
+style changes as you like.</p>
+<p>The following example will change the background-color of the &lt;div&gt; 
+element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+/* The animation code */<br>@keyframes example
+{<br>
+&nbsp;&nbsp;0%&nbsp;&nbsp; {background-color: red;}<br>
+  &nbsp;
+25%&nbsp; {background-color: yellow;}<br>
+&nbsp;&nbsp;50%&nbsp; {background-color: blue;}<br>
+&nbsp;&nbsp;100% {background-color: green;}<br>
+}<br><br>/* The element to apply the animation to */<br>div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryitc224.html?filename=trycss3_animation2">Try it Yourself &raquo;</a>
+</div>
+<p>The following example will change both the background-color and the position of the &lt;div&gt; 
+element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+/* The animation code */<br>@keyframes example
+{<br>
+&nbsp;&nbsp;0%&nbsp;&nbsp; {background-color:red; left:0px; top:0px;}<br>
+  &nbsp;
+25%&nbsp; {background-color:yellow; left:200px; top:0px;}<br>
+  &nbsp;
+50%&nbsp; {background-color:blue; left:200px; top:200px;}<br>
+  &nbsp;
+75%&nbsp; {background-color:green; left:0px; top:200px;}<br>
+  &nbsp;
+100% {background-color:red; left:0px; top:0px;}<br>
+}<br><br>/* The element to apply the animation to */<br>div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit21fd.html?filename=trycss3_animation3">Try it Yourself &raquo;</a>
+</div>
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
@@ -720,174 +906,300 @@ button to view the result.</p>
 </div>
 <hr>
 
-<h2>CSS Exercises and Quiz Test</h2>
-<p>Test your CSS skills at W3Schools!</p>
-<p><a href="css_exercises.html" class="w3-btn" style="width:200px">Start CSS Exercises!</a></p>
-<p><a href="css_quiz.html" class="w3-btn w3-blue" style="width:200px">Start CSS Quiz!</a></p>
+<h2>Delay an Animation</h2>
+<p>The <code class="w3-codespan">animation-delay</code> property specifies a delay for the start of an animation.</p>
+<p>The following example has a 2 seconds delay before starting the animation:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>
+  &nbsp; 
+animation-duration: 4s;<br>&nbsp; animation-delay: 2s;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit227f.html?filename=trycss3_animation_delay">Try it Yourself &raquo;</a>
+</div>
 
+<p>Negative values are also allowed. If using negative values, the animation 
+will start as if it had already been playing for <em>N</em> seconds.</p>
+<p>In the following example, the animation will start as if it had already been 
+playing for 2 seconds:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp; background-color: red;<br>&nbsp; 
+animation-name: example;<br>&nbsp; 
+animation-duration: 4s;<br>&nbsp; animation-delay: -2s;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit04d8.html?filename=trycss3_animation_delay2">Try it Yourself &raquo;</a>
+</div>
 <hr>
-<h2>CSS References</h2>
-<p>At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.</p>
-<div style="width:230px">
-<p><a href="../cssref/default.html">CSS Properties Reference</a></p>
-<p><a href="../cssref/css_selectors.html">CSS Selectors Reference</a></p>
-<p><a href="../cssref/css_functions.html">CSS Functions Reference</a></p>
-<p><a href="../cssref/css_animatable.html">CSS Animatable Reference</a></p>
-<p><a href="../cssref/css_ref_aural.html">CSS Aural Reference</a></p>
-<p><a href="../cssref/css_units.html">CSS Units</a></p>
-<p><a href="../cssref/css_colors.html">CSS Color Reference</a></p>
-<p><a href="../cssref/css_default_values.html">CSS Default Values</a></p>
-<p><a href="../cssref/css3_browsersupport.html">CSS Browser Support</a></p>
+
+<h2>Set How Many Times an Animation Should Run</h2>
+<p>The <code class="w3-codespan">animation-iteration-count</code> property specifies the number of times an animation should run.</p>
+<p>The following example will run the animation 3 times before it stops:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp;&nbsp;width: 100px;<br>&nbsp;&nbsp;height: 100px;<br>&nbsp;&nbsp;position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>&nbsp;&nbsp;animation-iteration-count: 3;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryitc10d.html?filename=trycss3_animation_count">Try it Yourself &raquo;</a>
 </div>
-<br>
-
-<!--
-<hr><h2>CSS Exam - Get Your Diploma!</h2>-->
-<link rel="preconnect" href="https://fonts.gstatic.com/">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&amp;display=swap" rel="stylesheet">
-
-<style>  
-
-#w3_cert_badge {
-  position: absolute;
-  right: 5%;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: -20%;
-}
-
-#w3_cert_arrow {
-  position: absolute;
-  right: 220px;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: 0;
-  z-index: 1;
-}
-
-#getdiploma {
-  position: relative;
-  padding: 0 60px 50px 60px;
-  margin-bottom: 125px;
-  border-radius: 16px;
-  background-color: #282A35;
-  color: #FFC0C7;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-#getdiploma h2 {
-  font-size:50px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma p {
-  font-size: 42px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma a {
-  border-radius: 50px;
-  mxargin-top: 50px;
-  font-size: 18px;
-  background-color: #04AA6D;
-  padding: 17px 55px
-}
-
-#getdiploma a:hover,
-#getdiploma a:active {
-  background-color: #059862 !important;
-}
-
-
-@media screen and (max-width: 1442px) {
-  #w3_cert_arrow {
-    right: 212px;
-    bottom: -15px;
-  }
-}
-
-
-@media screen and (max-width: 1202px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #w3_cert_arrow {
-    display: block;
-  }
-}
-
-
-@media screen and (max-width: 800px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-  #getdiploma h2 {
-    font-size: 44px;
-  }
-  #getdiploma p {
-    font-size: 30px;
-  }
-
-  #getdiploma a {
-    width: 100%;
-  }
-  #w3_cert_badge {
-    top: -16px;
-    right: -8px;
-    width: 100px;
-  }
-  #getdiploma  {
-    margin-bottom: 55px;
-  }
-}
-</style>
-
-<div class="w3-panel" id="getdiploma">
-
-<h2>Kickstart your career</h2>
-<p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
-<script>
-var foldername;
-function getCourseFolder() {
-  var pathname = window.location.pathname;
-  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
-  pos = pathname.indexOf("../index.html");
-  foldername = pathname.substr(0, pos);
-  foldername = foldername.toUpperCase();
-  if (foldername == "JS") foldername = "JavaScript";
-  if (foldername == "QUIZTEST") 
-  if (foldername == "QUIZTEST") {
-    document.getElementById("hey").innerText = "a";
-  }
-  if (foldername == "QUIZTEST") foldername = "";
-  if (foldername == "CS") foldername = "C#";
-  if (foldername == "CPP") foldername = "C++";
-  document.getElementById("coursetopic").innerText = foldername;
-}
-getCourseFolder();
-</script>
-<a class="w3-btn w3-margin-bottom" href="../../courses.w3schools.com/index.html" target="_blank"  onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get certified</a>
-
-<svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg id="w3_cert_badge" data-name="w3_cert_badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
-
+<p>The following example uses the value &quot;infinite&quot; to make the animation 
+continue for ever:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>
+  &nbsp; animation-iteration-count: 
+infinite;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit5499.html?filename=trycss3_animation_count2">Try it Yourself &raquo;</a>
 </div>
+<hr>
+
+<h2>Run Animation in Reverse Direction or Alternate Cycles</h2>
+<p>The <code class="w3-codespan">animation-direction</code> property specifies 
+whether an animation should be played forwards, backwards or in alternate 
+cycles.</p>
+<p>The animation-direction property can have the following values:</p>
+<ul>
+<li><code class="w3-codespan">normal</code> - The animation is played as normal 
+(forwards). This is default</li>
+<li><code class="w3-codespan">reverse</code> - The animation is played in 
+reverse direction (backwards)</li>
+<li><code class="w3-codespan">alternate </code>- The animation is played 
+forwards first, then backwards</li>
+<li><code class="w3-codespan">alternate-reverse</code> - The animation is played 
+backwards first, then forwards</li>
+</ul>
+<p>The following example will run the animation in reverse direction (backwards):</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp; 
+animation-name: example;<br>&nbsp; 
+animation-duration: 4s;<br>&nbsp; animation-direction: 
+reverse;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryited33.html?filename=trycss3_animation_direction">Try it Yourself &raquo;</a>
+</div>
+<p>The following example uses the value &quot;alternate&quot; to make the animation 
+run forwards first, then backwards:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp; 
+width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp; background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>&nbsp;&nbsp;animation-iteration-count: 2;<br>&nbsp;&nbsp;animation-direction: 
+alternate;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryita186.html?filename=trycss3_animation_direction2">Try it Yourself &raquo;</a>
+</div>
+
+<p>The following example uses the value &quot;alternate-reverse&quot; to make the animation 
+run backwards first, then forwards:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br>&nbsp;&nbsp;width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+position: relative;<br>&nbsp;&nbsp;background-color: red;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp;&nbsp;animation-duration: 4s;<br>&nbsp;&nbsp;animation-iteration-count: 2;<br>&nbsp;&nbsp;animation-direction: 
+alternate-reverse;<br>}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit28c6.html?filename=trycss3_animation_direction3">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Specify the Speed Curve of the Animation</h2>
+<p>The <code class="w3-codespan">animation-timing-function</code> property specifies the speed curve of the 
+animation.</p>
+<p>The animation-timing-function property can have the following values:</p>
+<ul>
+<li><code class="w3-codespan">ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+<li><code class="w3-codespan">linear</code> - Specifies an animation with the same speed from start to end</li>
+<li><code class="w3-codespan">ease-in</code> - Specifies an animation with a slow start</li>
+<li><code class="w3-codespan">ease-out</code> - Specifies an animation with a slow end</li>
+<li><code class="w3-codespan">ease-in-out</code> - Specifies an animation with a slow start and end</li>
+<li><code class="w3-codespan">cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
+</ul>
+<p>The following example shows the some of the different speed curves that can be used:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+#div1 {animation-timing-function: linear;}<br>#div2 
+{animation-timing-function: ease;}<br>#div3 {animation-timing-function: 
+ease-in;}<br>#div4 {animation-timing-function: ease-out;}<br>#div5 
+{animation-timing-function: ease-in-out;}</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit3ecb.html?filename=trycss3_animation_speed">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Specify the fill-mode For an Animation</h2>
+<p>CSS animations do not affect an element before the first keyframe is played 
+or after the last keyframe is played. The animation-fill-mode property can 
+override this behavior.</p>
+<p>The <code class="w3-codespan">animation-fill-mode</code> property specifies a 
+style for the target element when the animation is not playing (before it 
+starts, after it ends, or both).</p>
+<p>The animation-fill-mode property can have the following values:</p>
+<ul>
+<li><code class="w3-codespan">none</code> - Default value. Animation will not 
+apply any styles to the element before or after it is executing</li>
+<li><code class="w3-codespan">forwards</code> - The element will retain the 
+style values that is set by the last keyframe (depends on animation-direction 
+and animation-iteration-count)</li>
+<li><code class="w3-codespan">backwards</code> - The element will get the style 
+values that is set by the first keyframe (depends on animation-direction), and 
+retain this during the animation-delay period</li>
+<li><code class="w3-codespan">both</code> - The animation will follow the rules 
+for both forwards and backwards, extending the animation properties in both 
+directions</li>
+</ul>
+<p>The following example lets the &lt;div&gt; element retain the style values from the 
+last keyframe when the animation ends:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp; width: 100px;<br>&nbsp; height: 100px;<br>&nbsp;&nbsp;background: red;<br>&nbsp;&nbsp;position: relative;<br>&nbsp;&nbsp;animation-name: example;<br>&nbsp; animation-duration: 3s;<br>
+  &nbsp; animation-fill-mode: forwards;<br>
+  }</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit2f31.html?filename=trycss3_animation_fill-mode">Try it Yourself &raquo;</a>
+</div>
+
+<p>The following example lets the &lt;div&gt; element get the style values set by the 
+first keyframe before the animation starts (during the animation-delay period):</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp; width: 100px;<br>&nbsp; height: 100px;<br>&nbsp; 
+  background: red;<br>&nbsp; position: relative;<br>&nbsp; 
+animation-name: example;<br>&nbsp; 
+animation-duration: 3s;<br>&nbsp; 
+animation-delay: 2s;<br>&nbsp;&nbsp;animation-fill-mode: backwards;<br>
+  }</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit20cf.html?filename=trycss3_animation_fill-mode2">Try it Yourself &raquo;</a>
+</div>
+
+<p>The following example lets the &lt;div&gt; element get the style values set 
+by the first keyframe before the animation starts, and retain the style values 
+from the last keyframe when the animation ends:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp; width: 100px;<br>&nbsp; height: 100px;<br>&nbsp;&nbsp;background: red;<br>
+  &nbsp; position: relative;<br>&nbsp; 
+animation-name: example;<br>&nbsp; 
+animation-duration: 3s;<br>&nbsp; 
+animation-delay: 2s;<br>&nbsp; animation-fill-mode: both;<br>
+  }</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryit50b5.html?filename=trycss3_animation_fill-mode3">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Animation Shorthand Property</h2>
+<p>The example below uses six of the animation properties:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div
+{<br>&nbsp;
+animation-name: example;<br>
+  &nbsp;
+animation-duration: 5s;<br>
+  &nbsp;
+animation-timing-function: linear;<br>
+  &nbsp;
+animation-delay: 2s;<br>
+  &nbsp;
+animation-iteration-count: infinite;<br>
+  &nbsp;
+animation-direction: alternate;<br>
+} 
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryita90d.html?filename=trycss3_animation4">Try it Yourself &raquo;</a>
+</div>
+<p>The same animation effect as above can be achieved by using the shorthand 
+<code class="w3-codespan">animation</code> property:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div
+{<br>
+  &nbsp; animation: example 5s linear 2s infinite alternate;<br>
+}
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryitcfe0.html?filename=trycss3_animation5">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<div class="w3-container w3-dark-grey w3-padding">
+  <h2>Test Yourself with Exercises!</h2>
+  <div class="w3-bar w3-margin-bottom">
+    <a class="w3-bar-item w3-btn" href="exercise948f.html?filename=exercise_css3_animations1" target="_blank">Exercise 1 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercisebb93.html?filename=exercise_css3_animations2" target="_blank">Exercise 2 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercisea61b.html?filename=exercise_css3_animations3" target="_blank">Exercise 3 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercise7b78.html?filename=exercise_css3_animations4" target="_blank">Exercise 4 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercise827d.html?filename=exercise_css3_animations5" target="_blank">Exercise 5 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercise25fe.html?filename=exercise_css3_animations6" target="_blank">Exercise 6 &raquo;</a>
+  </div>
+</div>
+<hr>
+
+<h2>CSS Animation Properties</h2>
+<p>The following table lists the @keyframes rule and all the CSS animation properties:</p>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:28%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="../cssref/css3_pr_animation-keyframes.html">@keyframes</a></td>
+    <td>Specifies the animation code</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/css3_pr_animation.html">animation</a></td>
+    <td>A shorthand property for setting all the animation properties</td>
+  </tr>
+    <tr>
+    <td><a href="../cssref/css3_pr_animation-delay.html">animation-delay</a></td>
+    <td>Specifies a delay for the start of an animation</td>
+    </tr>
+  <tr>
+    <td><a href="../cssref/css3_pr_animation-direction.html">animation-direction</a></td>
+    <td>Specifies whether an animation should be played forwards, backwards or 
+    in alternate cycles</td>
+    </tr>
+  <tr>
+  <td><a href="../cssref/css3_pr_animation-duration.html">animation-duration</a></td>
+   <td>Specifies how long time an animation should take to complete one cycle</td>
+    </tr>
+  <tr>
+   <td><a href="../cssref/css3_pr_animation-fill-mode.html">animation-fill-mode</a></td>
+   <td>Specifies a style for the element when the animation is not playing 
+   (before it starts, after it ends, or both)</td>
+   </tr>
+ <tr>
+   <td><a href="../cssref/css3_pr_animation-iteration-count.html">animation-iteration-count</a></td>
+   <td>Specifies the number of times an animation should be played</td>
+   </tr>
+  <tr>
+    <td><a href="../cssref/css3_pr_animation-name.html">animation-name</a></td>
+    <td>Specifies the name of the @keyframes animation</td>
+  </tr>
+    <tr>
+    <td><a href="../cssref/css3_pr_animation-play-state.html">animation-play-state</a></td>
+    <td>Specifies whether the animation is running or paused</td>
+    </tr>
+  <tr>
+    <td><a href="../cssref/css3_pr_animation-timing-function.html">animation-timing-function</a></td>
+    <td>Specifies the speed curve of the animation</td>
+  </tr>
+</table>
 
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css3_transitions.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_tooltip.html">Next &#10095;</a>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@500&amp;display=swap" rel="stylesheet">
@@ -1454,5 +1766,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:42 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css3_animations.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:14:31 GMT -->
 </html>

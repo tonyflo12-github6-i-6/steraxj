@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:38 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_pseudo_classes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:13:20 GMT -->
 <head>
-<title>CSS Tutorial</title>
+<title>CSS Pseudo-classes</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -133,6 +133,47 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<style>
+p.tooltiptext {
+   display: none;
+   background-color: yellow;
+   padding: 20px;
+}
+
+div.tooltip-container:hover p.tooltiptext {
+   display: block;
+}
+
+.mouseover {
+background-color: #4CAF50;
+color: white;
+display: inline-block;
+padding: 2px 25px;
+text-align: center;
+width:93%;
+}
+.mouseover:hover {
+background-color:#008CBA;
+}
+.focus {
+  width: 99%;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border: 4px solid #ccc;
+}
+
+.focus:focus {
+  background-color:#555555; 
+  color: white;
+  outline: none;
+}
+@media screen and (max-width: 600px) {
+    .focus, .mouseover {
+       width:100%;
+       margin:5px;
+    }
+}
+</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -647,67 +688,63 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>CSS <span class="color_h1">Tutorial</span></h1>
+<h1>CSS <span class="color_h1">Pseudo-classes</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
-</div>
-
-<div class="w3-panel w3-info intro">
-<div class="w3-row-padding">
-<div class="w3-col w3-hide-small" style="width:140px">
-<p style="margin-top:12px"><b style="position:relative;left:17px;font-size:25px;font-family:Arial Black, Verdana, serif">CSS</b><br>
-<i class="fa fa-css3" style="position:relative;left:-10px;font-size:100px;color:dodgerblue"></i></p>
-</div>
-<div class="w3-rest">
-<p>CSS is the language we use to style an HTML document.</p>
-<p>CSS describes how HTML elements should be displayed.</p>
-<p>This tutorial will teach you CSS from basic to advanced.</p>
-<a class="w3-btn w3-margin-bottom" href="css_intro.html">Start learning CSS now &raquo;</a>
-</div>
-</div>
+<a class="w3-left w3-btn" href="css_combinators.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_pseudo_elements.html">Next &#10095;</a>
 </div>
 <hr>
+<h2>What are Pseudo-classes?</h2>
+<p>A pseudo-class is used to define a special state 
+of an element.</p>
+<p>For example, it can be used to:</p>
+<ul>
+<li>Style an element when a user mouses over it</li>
+<li>Style visited and unvisited links differently</li>
+<li>Style an element when it gets focus</li>
+</ul>
 
-<h2>Examples in Each Chapter</h2>
-<p>This CSS tutorial contains hundreds of CSS examples.</p>
-<p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+<div class="w3-row">
+<div class="w3-half">
+<div class="mouseover">
+<p>Mouse Over Me</p>
+</div>
+</div>
 
+<div class="w3-half">
+<input class="focus" type="text" name="fname" placeholder="Click Me To Get Focus">
+</div>
+</div>
+<p style="clear:both;"></p>
+<hr>
+
+<h2>Syntax</h2>
+<p>The syntax of pseudo-classes:</p>
 <div class="w3-example">
-<h3>CSS Example</h3>
 <div class="w3-code notranslate cssHigh">
-body
-{<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
-<br>h1
-{<br>
-&nbsp;&nbsp;color: white;<br>
-&nbsp;&nbsp;text-align: center;<br>
-}<br><br>
-p
-{<br>
-  &nbsp;
-font-family: verdana;<br>
-&nbsp;&nbsp;font-size: 20px;<br>
-}</div>
-<a target="_blank" href="tryit438d.html?filename=trycss_default" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
-<p><b>Click on the &quot;Try it Yourself&quot; button to see how it works.</b></p>
-
+selector:pseudo-class {<br>&nbsp;&nbsp;property: value;<br>}</div>
+</div>
 <hr>
-<h2>CSS Examples</h2>
-<p>Learn from over 300 examples! With our editor, you can edit the CSS, and click on a
-button to view the result.</p>
-<p><a href="css_examples.html">Go to CSS Examples!</a></p>
 
-<hr>
-<h2>Use the Menu</h2>
-<p>We recommend reading this tutorial, in the sequence listed in the menu.</p>
-<p>If you have a large screen, the menu will always be present on the left.</p>
-<p>If you have a small screen, open the menu by clicking the top menu sign <span class="w3-xlarge">&#9776;</span>.</p>
-
-<hr><h2>CSS Templates</h2>
-<p>We have created some responsive W3.CSS templates for you to use.</p>
-<p>You are free to modify, save, share, and use them in all your projects.</p>
-<p><a href="css_rwd_templates.html">Free CSS Templates!</a></p>
+<h2>Anchor Pseudo-classes</h2>
+<p>Links can be displayed in different ways:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+   /* unvisited link */<br>a:link {<br>&nbsp; color: #FF0000;<br>}<br><br>/* visited 
+link */<br>a:visited {<br>&nbsp; color: #00FF00;<br>}<br><br>/* mouse over link */<br>
+a:hover {<br>&nbsp;&nbsp;color: #FF00FF;<br>}<br><br>/* selected link */<br>a:active {<br>
+&nbsp;&nbsp;color: #0000FF;<br>}
+</div>
+<a target="_blank" href="tryit9cfd.html?filename=trycss_link" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<br>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Note:</b> <code class="w3-codespan">a:hover</code> MUST come after <code class="w3-codespan">a:link</code> and 
+<code class="w3-codespan">a:visited</code> in the CSS definition in order to be effective! <code class="w3-codespan">a:active</code> MUST come after 
+<code class="w3-codespan">a:hover</code> in the CSS definition in order to be effective!
+Pseudo-class names are not case-sensitive.</p>
+</div>
 
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
@@ -720,174 +757,333 @@ button to view the result.</p>
 </div>
 <hr>
 
-<h2>CSS Exercises and Quiz Test</h2>
-<p>Test your CSS skills at W3Schools!</p>
-<p><a href="css_exercises.html" class="w3-btn" style="width:200px">Start CSS Exercises!</a></p>
-<p><a href="css_quiz.html" class="w3-btn w3-blue" style="width:200px">Start CSS Quiz!</a></p>
+<h2>Pseudo-classes and CSS Classes</h2>
+<p>Pseudo-classes can be combined with CSS classes:</p>
+<p>When you hover over the link in the example, it will change color:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+a.highlight:hover {<br>&nbsp;&nbsp;color: #ff0000;<br>} </div>
+<a target="_blank" href="tryit2d7c.html?filename=trycss_pseudo-class" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Hover on &lt;div&gt;</h2>
+<p>An example of using the <code class="w3-codespan">:hover</code> pseudo-class on a &lt;div&gt; element:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+div:hover {<br>&nbsp; background-color: blue;<br>}</div>
+<a target="_blank" href="tryit230b.html?filename=trycss_pseudo-class_hover_div" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<br>
+</div>
+<hr>
+
+<h2>Simple Tooltip Hover</h2>
+<p>Hover over a &lt;div&gt; element to show a &lt;p&gt; element (like a tooltip):</p>
+<div class="tooltip-container w3-text-red"><b>Hover over me to show the &lt;p&gt; element.</b>
+  <p class="tooltiptext w3-text-black">Tada! Here I am!</p>
+</div>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+p {<br>&nbsp; display: none;<br>&nbsp; 
+background-color: yellow;<br>&nbsp; padding: 20px;<br>}<br><br>
+div:hover p {<br>&nbsp; display: block;<br>}</div>
+<a target="_blank" href="tryit6cd1-2.html?filename=trycss_pseudo-class_hover_tooltip" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<br>
+</div>
 
 <hr>
-<h2>CSS References</h2>
-<p>At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.</p>
-<div style="width:230px">
-<p><a href="../cssref/default.html">CSS Properties Reference</a></p>
-<p><a href="../cssref/css_selectors.html">CSS Selectors Reference</a></p>
-<p><a href="../cssref/css_functions.html">CSS Functions Reference</a></p>
-<p><a href="../cssref/css_animatable.html">CSS Animatable Reference</a></p>
-<p><a href="../cssref/css_ref_aural.html">CSS Aural Reference</a></p>
-<p><a href="../cssref/css_units.html">CSS Units</a></p>
-<p><a href="../cssref/css_colors.html">CSS Color Reference</a></p>
-<p><a href="../cssref/css_default_values.html">CSS Default Values</a></p>
-<p><a href="../cssref/css3_browsersupport.html">CSS Browser Support</a></p>
+
+<h2>CSS - The :first-child Pseudo-class</h2>
+<p>The <code class="w3-codespan">:first-child</code> pseudo-class matches a specified element that is the first child of another element.</p>
+
+<h2>Match the first &lt;p&gt; element</h2>
+<p>In the following example, the selector matches any &lt;p&gt; element that is the first child of any element:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+p:first-child
+{<br>
+  &nbsp;
+color: blue;<br>
+}</div>
+<a target="_blank" href="tryit00a0.html?filename=trycss_first-child1" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
-<br>
+<hr>
 
-<!--
-<hr><h2>CSS Exam - Get Your Diploma!</h2>-->
-<link rel="preconnect" href="https://fonts.gstatic.com/">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&amp;display=swap" rel="stylesheet">
-
-<style>  
-
-#w3_cert_badge {
-  position: absolute;
-  right: 5%;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: -20%;
-}
-
-#w3_cert_arrow {
-  position: absolute;
-  right: 220px;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: 0;
-  z-index: 1;
-}
-
-#getdiploma {
-  position: relative;
-  padding: 0 60px 50px 60px;
-  margin-bottom: 125px;
-  border-radius: 16px;
-  background-color: #282A35;
-  color: #FFC0C7;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-#getdiploma h2 {
-  font-size:50px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma p {
-  font-size: 42px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma a {
-  border-radius: 50px;
-  mxargin-top: 50px;
-  font-size: 18px;
-  background-color: #04AA6D;
-  padding: 17px 55px
-}
-
-#getdiploma a:hover,
-#getdiploma a:active {
-  background-color: #059862 !important;
-}
-
-
-@media screen and (max-width: 1442px) {
-  #w3_cert_arrow {
-    right: 212px;
-    bottom: -15px;
-  }
-}
-
-
-@media screen and (max-width: 1202px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #w3_cert_arrow {
-    display: block;
-  }
-}
-
-
-@media screen and (max-width: 800px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-  #getdiploma h2 {
-    font-size: 44px;
-  }
-  #getdiploma p {
-    font-size: 30px;
-  }
-
-  #getdiploma a {
-    width: 100%;
-  }
-  #w3_cert_badge {
-    top: -16px;
-    right: -8px;
-    width: 100px;
-  }
-  #getdiploma  {
-    margin-bottom: 55px;
-  }
-}
-</style>
-
-<div class="w3-panel" id="getdiploma">
-
-<h2>Kickstart your career</h2>
-<p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
-<script>
-var foldername;
-function getCourseFolder() {
-  var pathname = window.location.pathname;
-  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
-  pos = pathname.indexOf("../index.html");
-  foldername = pathname.substr(0, pos);
-  foldername = foldername.toUpperCase();
-  if (foldername == "JS") foldername = "JavaScript";
-  if (foldername == "QUIZTEST") 
-  if (foldername == "QUIZTEST") {
-    document.getElementById("hey").innerText = "a";
-  }
-  if (foldername == "QUIZTEST") foldername = "";
-  if (foldername == "CS") foldername = "C#";
-  if (foldername == "CPP") foldername = "C++";
-  document.getElementById("coursetopic").innerText = foldername;
-}
-getCourseFolder();
-</script>
-<a class="w3-btn w3-margin-bottom" href="../../courses.w3schools.com/index.html" target="_blank"  onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get certified</a>
-
-<svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg id="w3_cert_badge" data-name="w3_cert_badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
-
+<h2>Match the first &lt;i&gt; element in all &lt;p&gt; elements</h2>
+<p>In the following example, the selector matches the first &lt;i&gt; element in all &lt;p&gt; elements:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+p i:first-child
+{<br>
+  &nbsp;
+color: blue;<br>
+}</div>
+<a target="_blank" href="tryit3ae1.html?filename=trycss_first-child2" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
+<hr>
+
+<h2>Match all &lt;i&gt; elements in all first child &lt;p&gt; elements</h2>
+<p>In the following example, the selector matches all &lt;i&gt; elements in &lt;p&gt; elements that are the first child of another element:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+p:first-child i
+{<br>
+&nbsp;&nbsp;color: blue;<br>
+}</div>
+<a target="_blank" href="tryitdf75.html?filename=trycss_first-child3" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>CSS - The :lang Pseudo-class</h2>
+<p>The <code class="w3-codespan">:lang</code> pseudo-class allows you to define special rules for different languages.</p>
+<p>In the example below, <code class="w3-codespan">:lang</code> defines the quotation marks for &lt;q&gt; elements with lang=&quot;no&quot;:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;style&gt;<br>
+  q:lang(no) {<br>&nbsp; quotes: &quot;~&quot; &quot;~&quot;;<br>}<br>
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br><br>
+&lt;p&gt;Some text &lt;q lang=&quot;no&quot;&gt;A quote in a paragraph&lt;/q&gt; 
+Some text.&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</div>
+<a target="_blank" href="tryit0a95.html?filename=trycss_lang" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+<h2>More Examples</h2>
+
+<p><a target="_blank" href="tryitb066.html?filename=trycss_link2">Add different styles to hyperlinks</a><br>
+This example demonstrates how to add other styles to hyperlinks.</p>
+
+<p><a target="_blank" href="tryitde22.html?filename=trycss_link_focus">Use of :focus</a><br>
+This example demonstrates how to use the :focus pseudo-class.</p>
+
+<hr>
+<div class="w3-container w3-dark-grey w3-padding">
+  <h2>Test Yourself with Exercises!</h2>
+  <div class="w3-bar w3-margin-bottom">
+    <a class="w3-bar-item w3-btn" href="exercise9cfa.html?filename=exercise_pseudo_classes1" target="_blank">Exercise 1 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercise8d33.html?filename=exercise_pseudo_classes2" target="_blank">Exercise 2 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercisea81d.html?filename=exercise_pseudo_classes3" target="_blank">Exercise 3 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exerciseb34e.html?filename=exercise_pseudo_classes4" target="_blank">Exercise 4 &raquo;</a>
+  </div>
+</div>
+
+<hr>
+<h2>All CSS Pseudo Classes</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:20%">Selector</th>
+    <th style="width:20%">Example</th>
+    <th>Example description</th>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_active.html">:active</a></td>
+    <td class="notranslate">a:active</td>
+    <td>Selects the active link</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_checked.html">:checked</a></td>
+    <td class="notranslate">input:checked</td>
+    <td>Selects every checked &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_disabled.html">:disabled</a></td>
+    <td class="notranslate">input:disabled</td>
+    <td>Selects every disabled &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_empty.html">:empty</a></td>
+    <td class="notranslate">p:empty</td>
+    <td>Selects every &lt;p&gt; element that has no children</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_enabled.html">:enabled</a></td>
+    <td class="notranslate">input:enabled</td>
+    <td>Selects every enabled &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_firstchild.html">:first-child</a></td>
+    <td class="notranslate">p:first-child</td>
+    <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_first-of-type.html">:first-of-type</a></td>
+    <td class="notranslate">p:first-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_focus.html">:focus</a></td>
+    <td class="notranslate">input:focus</td>
+    <td>Selects the &lt;input&gt; element that has focus</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_hover.html">:hover</a></td>
+    <td class="notranslate">a:hover</td>
+    <td>Selects links on mouse over</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_in-range.html">:in-range</a></td>
+    <td class="notranslate">input:in-range</td>
+    <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_invalid.html">:invalid</a></td>
+    <td class="notranslate">input:invalid</td>
+    <td>Selects all &lt;input&gt; elements with an invalid value</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_lang.html">:lang(<i>language</i>)</a></td>
+    <td class="notranslate">p:lang(it)</td>
+    <td>Selects every &lt;p&gt; element with a lang attribute value starting with &quot;it&quot;</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_last-child.html">:last-child</a></td>
+    <td class="notranslate">p:last-child</td>
+    <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_last-of-type.html">:last-of-type</a></td>
+    <td class="notranslate">p:last-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_link.html">:link</a></td>
+    <td class="notranslate">a:link</td>
+    <td>Selects all unvisited links</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_not.html">:not(selector)</a></td>
+    <td class="notranslate">:not(p)</td>
+    <td>Selects every element that is not a &lt;p&gt; element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_nth-child.html">:nth-child(n)</a></td>
+    <td class="notranslate">p:nth-child(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_nth-last-child.html">:nth-last-child(n)</a></td>
+    <td class="notranslate">p:nth-last-child(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_nth-last-of-type.html">:nth-last-of-type(n)</a></td>
+    <td class="notranslate">p:nth-last-of-type(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_nth-of-type.html">:nth-of-type(n)</a></td>
+    <td class="notranslate">p:nth-of-type(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_only-of-type.html">:only-of-type</a></td>
+    <td class="notranslate">p:only-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_only-child.html">:only-child</a></td>
+    <td class="notranslate">p:only-child</td>
+    <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_optional.html">:optional</a></td>
+    <td class="notranslate">input:optional</td>
+    <td>Selects &lt;input&gt; elements with no &quot;required&quot; attribute</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_out-of-range.html">:out-of-range</a></td>
+    <td class="notranslate">input:out-of-range</td>
+    <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_read-only.html">:read-only</a></td>
+    <td class="notranslate">input:read-only</td>
+    <td>Selects &lt;input&gt; elements with a &quot;readonly&quot; attribute specified</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_read-write.html">:read-write</a></td>
+    <td class="notranslate">input:read-write</td>
+    <td>Selects &lt;input&gt; elements with no &quot;readonly&quot; attribute</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_required.html">:required</a></td>
+    <td class="notranslate">input:required</td>
+    <td>Selects &lt;input&gt; elements with a &quot;required&quot; attribute specified</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_root.html">:root</a></td>
+    <td class="notranslate">root</td>
+    <td>Selects the document's root element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_target.html">:target</a></td>
+    <td class="notranslate">#news:target</td>
+    <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_valid.html">:valid</a></td>
+    <td class="notranslate">input:valid</td>
+    <td>Selects all &lt;input&gt; elements with a valid value</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/sel_visited.html">:visited</a></td>
+    <td class="notranslate">a:visited</td>
+    <td>Selects all visited links</td>
+  </tr>
+</table>
+
+<h2>All CSS Pseudo Elements</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:20%">Selector</th>
+    <th style="width:20%">Example</th>
+    <th>Example description</th>
+  </tr>
+<tr>
+    <td><a href="../cssref/sel_after.html">::after</a></td>
+    <td class="notranslate">p::after</td>
+    <td>Insert content after every &lt;p&gt; element</td>
+    </tr>
+  <tr>
+<td><a href="../cssref/sel_before.html">::before</a></td>
+    <td class="notranslate">p::before</td>
+    <td>Insert content before every &lt;p&gt; element</td>
+    </tr>
+<tr>
+    <td><a href="../cssref/sel_firstletter.html">::first-letter</a></td>
+    <td class="notranslate">p::first-letter</td>
+    <td>Selects the first letter of every &lt;p&gt; element</td>
+  </tr>
+<tr>
+    <td><a href="../cssref/sel_firstline.html">::first-line</a></td>
+    <td class="notranslate">p::first-line</td>
+    <td>Selects the first line of every &lt;p&gt; element</td>
+  </tr>
+<tr>
+    <td><a href="../cssref/sel_selection.html">::selection</a></td>
+    <td class="notranslate">p::selection</td>
+    <td>Selects the portion of an element that is selected by a user</td>
+  </tr>
+</table>
 
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css_combinators.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_pseudo_elements.html">Next &#10095;</a>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@500&amp;display=swap" rel="stylesheet">
@@ -1454,5 +1650,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:42 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_pseudo_classes.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:13:20 GMT -->
 </html>

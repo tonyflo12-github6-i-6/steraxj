@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:38 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_tooltip.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:14:32 GMT -->
 <head>
-<title>CSS Tutorial</title>
+<title>CSS Tooltip</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -133,6 +133,241 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #ccc;
+    color: #006080;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip .tooltiptext2 {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext2 {
+    visibility: visible;
+}
+.tooltip-right {
+  top: -5px;
+  left: 125%;  
+}
+.tooltip-right2 {
+  top: -5px;
+  left: 105%;  
+}
+
+.tooltip-right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.tooltip-bottom {
+  top: 135%;
+  left: 50%;  
+  margin-left: -60px;
+}
+
+.tooltip-bottom2 {
+  top: 125%;
+  left: 50%;  
+  margin-left: -60px;
+}
+
+.tooltip-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+.tooltip-top {
+  bottom: 125%;
+  left: 50%;  
+  margin-left: -60px;
+}
+.tooltip-top2 {
+  bottom: 115%;
+  left: 50%;  
+  margin-left: -60px;
+}
+
+.tooltip-top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-left {
+  top: -5px;
+  bottom:auto;
+  right: 128%;  
+}
+
+.tooltip-left2 {
+  top: -5px;
+  bottom:auto;
+  right: 105%;  
+}
+
+.tooltip-left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
+
+.tooltip .tooltiptext-bottomarrow {
+    visibility: hidden;
+    width: 120px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltiptext-bottomarrow::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext-bottomarrow {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext-toparrow {
+    visibility: hidden;
+    width: 120px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltiptext-toparrow::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext-toparrow {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext-leftarrow {
+    visibility: hidden;
+    width: 120px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+.tooltip .tooltiptext-leftarrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext-leftarrow {
+    visibility: visible;
+}
+.tooltip .tooltiptext-rightarrow {
+    visibility: hidden;
+    width: 120px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+}
+.tooltip .tooltiptext-rightarrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext-rightarrow {
+    visibility: visible;
+}
+</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -647,68 +882,91 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>CSS <span class="color_h1">Tutorial</span></h1>
+<h1>CSS <span class="color_h1">Tooltip</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
-</div>
-
-<div class="w3-panel w3-info intro">
-<div class="w3-row-padding">
-<div class="w3-col w3-hide-small" style="width:140px">
-<p style="margin-top:12px"><b style="position:relative;left:17px;font-size:25px;font-family:Arial Black, Verdana, serif">CSS</b><br>
-<i class="fa fa-css3" style="position:relative;left:-10px;font-size:100px;color:dodgerblue"></i></p>
-</div>
-<div class="w3-rest">
-<p>CSS is the language we use to style an HTML document.</p>
-<p>CSS describes how HTML elements should be displayed.</p>
-<p>This tutorial will teach you CSS from basic to advanced.</p>
-<a class="w3-btn w3-margin-bottom" href="css_intro.html">Start learning CSS now &raquo;</a>
-</div>
-</div>
+<a class="w3-left w3-btn" href="css3_animations.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css3_images.html">Next &#10095;</a>
 </div>
 <hr>
+<p class="intro">Create tooltips with CSS.</p>
+<hr>
+<h2>Demo: Tooltip Examples</h2>
 
-<h2>Examples in Each Chapter</h2>
-<p>This CSS tutorial contains hundreds of CSS examples.</p>
-<p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+<p>A tooltip is often used to specify extra information about something when the 
+user moves the mouse pointer over an element:</p>
+
+<div class="w3-row w3-center" style="margin-top:35px;margin-bottom:35px;">
+
+<div class="w3-quarter">
+  <div class="tooltip">Top
+    <span class="tooltiptext tooltip-top">Tooltip text</span>
+  </div>
+</div>
+
+<div class="w3-quarter">
+  <div class="tooltip">Right
+    <span class="tooltiptext tooltip-right">Tooltip text</span>
+  </div>
+</div>
+
+<div class="w3-quarter">
+  <div class="tooltip">Bottom
+    <span class="tooltiptext tooltip-bottom">Tooltip text</span>
+  </div>
+</div>
+
+
+<div class="w3-quarter">
+  <div class="tooltip">Left
+    <span class="tooltiptext tooltip-left">Tooltip text</span>
+  </div>
+</div>
+
+</div>
+<p style="clear:both"></p>
+<hr>
+
+<h2>Basic Tooltip</h2>
+
+<p>Create a tooltip that appears when the user moves the mouse over an element:</p>
 
 <div class="w3-example">
-<h3>CSS Example</h3>
+<h3>Example</h3>
 <div class="w3-code notranslate cssHigh">
-body
-{<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
-<br>h1
-{<br>
-&nbsp;&nbsp;color: white;<br>
-&nbsp;&nbsp;text-align: center;<br>
-}<br><br>
-p
-{<br>
-  &nbsp;
-font-family: verdana;<br>
-&nbsp;&nbsp;font-size: 20px;<br>
-}</div>
-<a target="_blank" href="tryit438d.html?filename=trycss_default" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
-<p><b>Click on the &quot;Try it Yourself&quot; button to see how it works.</b></p>
-
-<hr>
-<h2>CSS Examples</h2>
-<p>Learn from over 300 examples! With our editor, you can edit the CSS, and click on a
-button to view the result.</p>
-<p><a href="css_examples.html">Go to CSS Examples!</a></p>
-
-<hr>
-<h2>Use the Menu</h2>
-<p>We recommend reading this tutorial, in the sequence listed in the menu.</p>
-<p>If you have a large screen, the menu will always be present on the left.</p>
-<p>If you have a small screen, open the menu by clicking the top menu sign <span class="w3-xlarge">&#9776;</span>.</p>
-
-<hr><h2>CSS Templates</h2>
-<p>We have created some responsive W3.CSS templates for you to use.</p>
-<p>You are free to modify, save, share, and use them in all your projects.</p>
-<p><a href="css_rwd_templates.html">Free CSS Templates!</a></p>
-
+&lt;style&gt;<br>/* Tooltip container */<br>.tooltip {<br>&nbsp;&nbsp;position: relative;<br>
+  &nbsp; 
+display: inline-block;<br>&nbsp; border-bottom: 1px dotted 
+black; /* If you want dots under the hoverable text */<br>}<br><br>/* Tooltip text 
+*/<br>.tooltip .tooltiptext {<br>&nbsp;&nbsp;visibility: hidden;<br>&nbsp;&nbsp;width: 120px;<br>
+  &nbsp; 
+background-color: black;<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;text-align: center;<br>
+  &nbsp; padding: 5px 0;<br>&nbsp; 
+border-radius: 6px;<br>&nbsp;<br>&nbsp; 
+/* Position the tooltip text - see examples below! */<br>&nbsp; position: absolute;<br>
+  &nbsp; z-index: 1;<br>}<br><br>/* Show 
+the tooltip text when you mouse over the tooltip container */<br>.tooltip:hover 
+.tooltiptext {<br>&nbsp;&nbsp;visibility: visible;<br>}<br>&lt;/style&gt;<br><br><span class="htmlHigh">&lt;div class="tooltip"&gt;<span style="color:black !important">Hover 
+over me</span><br>
+&nbsp; &lt;span class=&quot;tooltiptext&quot;&gt;<span style="color:black;">Tooltip 
+text</span>&lt;/span&gt;<br>&lt;/div&gt;</span></div>
+<a target="_blank" href="tryit1b1c.html?filename=trycss_tooltip" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<h3>Example Explained</h3>
+<p><strong>HTML:</strong> Use a container element (like &lt;div&gt;) and add the 
+<code class="w3-codespan">&quot;tooltip&quot;</code> class to it. When the user mouse over this &lt;div&gt;, it will show the 
+tooltip text.</p>
+<p>The tooltip text is placed inside an inline element (like &lt;span&gt;) with <code class="w3-codespan">class=&quot;tooltiptext&quot;</code>.</p>
+<p><strong>CSS:</strong> The <code class="w3-codespan">tooltip</code> class use <code class="w3-codespan">position:relative</code>, 
+which is needed to position the tooltip text (<code class="w3-codespan">position:absolute</code>).
+<strong>Note:</strong> See examples below on how to position the tooltip.</p>
+<p>The <code class="w3-codespan">tooltiptext</code> class holds the actual tooltip text. It is 
+hidden by default, and will be visible on hover (see below). We have also added 
+some basic styles to it: 120px width, black background color, white text color, 
+centered text, and 5px top and bottom padding. </p>
+<p>The CSS <code class="w3-codespan">border-radius</code> property is used to add rounded corners to the tooltip 
+text.</p>
+<p>The <code class="w3-codespan">:hover</code> selector is used to show the tooltip text when the user moves the 
+mouse over the &lt;div&gt; with <code class="w3-codespan">class=&quot;tooltip&quot;</code>.</p>
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
@@ -720,174 +978,207 @@ button to view the result.</p>
 </div>
 <hr>
 
-<h2>CSS Exercises and Quiz Test</h2>
-<p>Test your CSS skills at W3Schools!</p>
-<p><a href="css_exercises.html" class="w3-btn" style="width:200px">Start CSS Exercises!</a></p>
-<p><a href="css_quiz.html" class="w3-btn w3-blue" style="width:200px">Start CSS Quiz!</a></p>
+<h2>Positioning Tooltips</h2>
 
-<hr>
-<h2>CSS References</h2>
-<p>At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.</p>
-<div style="width:230px">
-<p><a href="../cssref/default.html">CSS Properties Reference</a></p>
-<p><a href="../cssref/css_selectors.html">CSS Selectors Reference</a></p>
-<p><a href="../cssref/css_functions.html">CSS Functions Reference</a></p>
-<p><a href="../cssref/css_animatable.html">CSS Animatable Reference</a></p>
-<p><a href="../cssref/css_ref_aural.html">CSS Aural Reference</a></p>
-<p><a href="../cssref/css_units.html">CSS Units</a></p>
-<p><a href="../cssref/css_colors.html">CSS Color Reference</a></p>
-<p><a href="../cssref/css_default_values.html">CSS Default Values</a></p>
-<p><a href="../cssref/css3_browsersupport.html">CSS Browser Support</a></p>
+<p>In this example, the tooltip is placed to the right (<code class="w3-codespan">left:105%</code>) of the &quot;hoverable&quot; 
+text (&lt;div&gt;). Also note that <code class="w3-codespan">top:-5px</code> is used to place it in the middle of its container element. 
+We use the number <strong>5</strong> because the tooltip text has a top and 
+bottom padding of 
+5px. If you increase its padding, also increase the value of the <code class="w3-codespan">top</code> property to 
+ensure that it stays in the middle (if this is something you want). The same 
+applies if you want the tooltip placed to the left.</p>
+
+<div class="w3-example">
+<h3>Right Tooltip</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext {<br>&nbsp; top: -5px;<br>&nbsp; 
+left: 
+105%; <br>}
 </div>
-<br>
+<p>Result:</p>
+   <div class="w3-padding w3-white notranslate w3-center">
+     <div class="tooltip">Hover over me
+       <span class="tooltiptext2 tooltip-right2">Tooltip text</span>
+     </div>
+   </div>
+<a target="_blank" href="tryit3e3f.html?filename=trycss_tooltip_right" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
-<!--
-<hr><h2>CSS Exam - Get Your Diploma!</h2>-->
-<link rel="preconnect" href="https://fonts.gstatic.com/">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<div class="w3-example">
+<h3>Left Tooltip</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext {<br>&nbsp; top: -5px;<br>&nbsp; 
+right: 
+105%; <br>}
+</div>
+<p>Result:</p>
+   <div class="w3-padding w3-white notranslate w3-center">
+     <div class="tooltip">Hover over me
+       <span class="tooltiptext2 tooltip-left2">Tooltip text</span>
+     </div>
+   </div>
+<a target="_blank" href="tryit1835.html?filename=trycss_tooltip_left" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
-<style>  
+<p>If you want the tooltip to appear on top or on the bottom, see examples 
+below. Note that we use the <code class="w3-codespan">margin-left</code> property with a value of minus 60 
+pixels. This is to center the tooltip above/below the hoverable text. It is set 
+to the half of the tooltip's width (120/2 = 60).</p>
 
-#w3_cert_badge {
-  position: absolute;
-  right: 5%;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: -20%;
-}
+<div class="w3-example">
+<h3>Top Tooltip</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext {<br>&nbsp; width: 120px;<br>&nbsp; 
+bottom: 100%;<br>&nbsp; left: 
+50%; <br>&nbsp;&nbsp;margin-left: -60px; /* Use half of the width 
+(120/2 = 60), to center the tooltip */<br>}
+</div>
+<p>Result:</p>
+   <div class="w3-padding w3-white notranslate w3-center">
+     <div class="tooltip">Hover over me
+       <span class="tooltiptext2 tooltip-top2">Tooltip text</span>
+     </div>
+   </div>
+<a target="_blank" href="tryit31b6.html?filename=trycss_tooltip_top" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
-#w3_cert_arrow {
-  position: absolute;
-  right: 220px;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: 0;
-  z-index: 1;
-}
+<div class="w3-example">
+<h3>Bottom Tooltip</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext {<br>&nbsp; width: 120px;<br>&nbsp; top: 100%;<br>&nbsp; left: 
+50%; <br>&nbsp;&nbsp;margin-left: -60px; /* Use half of the width 
+(120/2 = 60), to center the tooltip */<br>}
+</div>
+<p>Result:</p>
+    <div class="w3-padding w3-white notranslate w3-center">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext2 tooltip-bottom2">Tooltip text</span>
+      </div>
+    </div>
+<a target="_blank" href="tryitf139.html?filename=trycss_tooltip_bottom" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
 
-#getdiploma {
-  position: relative;
-  padding: 0 60px 50px 60px;
-  margin-bottom: 125px;
-  border-radius: 16px;
-  background-color: #282A35;
-  color: #FFC0C7;
-  font-family: 'Source Sans Pro', sans-serif;
-}
+<h2>Tooltip Arrows</h2>
 
-#getdiploma h2 {
-  font-size:50px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
+<p>To create an arrow that should appear from a specific side of the tooltip, add "empty" 
+content after 
+tooltip, with the pseudo-element class <code class="w3-codespan">::after</code> together with the <code class="w3-codespan">content</code> 
+property. The arrow itself is created using borders. This will make the tooltip 
+look like a speech bubble.</p>
+<p>This example demonstrates how to add an arrow to the bottom of the tooltip:</p>
 
-#getdiploma p {
-  font-size: 42px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
+<div class="w3-example">
+<h3>Bottom Arrow</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp; position: absolute;<br>
+  &nbsp; top: 100%; 
+/* At the bottom of the tooltip */<br>&nbsp; left: 50%;<br>&nbsp; margin-left: -5px;<br>
+  &nbsp; 
+border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; 
+border-color: black transparent transparent transparent;<br>}
+</div>
+   <p>Result:</p>
+   <div class="w3-padding w3-white notranslate w3-center">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext-bottomarrow">Tooltip text</span>
+      </div>
+    </div>
+<a target="_blank" href="tryitac1a.html?filename=trycss_tooltip_arrow_bottom" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
-#getdiploma a {
-  border-radius: 50px;
-  mxargin-top: 50px;
-  font-size: 18px;
-  background-color: #04AA6D;
-  padding: 17px 55px
-}
+<h3>Example Explained</h3>
+<p>Position the arrow inside the tooltip: <code class="w3-codespan">top: 100%</code> will place the arrow at the 
+bottom of the tooltip. <code class="w3-codespan">left: 50%</code> will center the arrow.</p>
 
-#getdiploma a:hover,
-#getdiploma a:active {
-  background-color: #059862 !important;
-}
+<p><strong>Note:</strong> The <code class="w3-codespan">border-width</code> property specifies the size of the 
+arrow. If you change this, also change the <code class="w3-codespan">margin-left</code> value to the same. This 
+will keep the arrow centered.</p>
+<p>The <code class="w3-codespan">border-color</code> is used to transform the content into an arrow. We set the 
+top border to black, and the rest to transparent. If all sides were black, you 
+would end up with a black square box.</p>
 
+<p>This example demonstrates how to add an arrow to the top of the tooltip. 
+Notice that we set the bottom border color this time:</p>
 
-@media screen and (max-width: 1442px) {
-  #w3_cert_arrow {
-    right: 212px;
-    bottom: -15px;
-  }
-}
+<div class="w3-example">
+<h3>Top Arrow</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext::after {<br>&nbsp;&nbsp;content: &quot; &quot;;<br>&nbsp;&nbsp;position: absolute;<br>&nbsp;&nbsp;bottom: 100%;&nbsp; /* At the top of the tooltip */<br>
+  &nbsp; left: 50%;<br>&nbsp; margin-left: -5px;<br>&nbsp; 
+border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; 
+border-color: transparent transparent black transparent;<br>}
+</div>
+<p>Result:</p>
+   <div class="w3-padding w3-white notranslate w3-center">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext-toparrow">Tooltip text</span>
+      </div>
+    </div>
+<a target="_blank" href="tryitb133.html?filename=trycss_tooltip_arrow_top" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
+<p>This example demonstrates how to add an arrow to the left of the tooltip:</p>
 
-@media screen and (max-width: 1202px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-}
+<div class="w3-example">
+<h3>Left Arrow</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp;&nbsp;position: absolute;<br>&nbsp;&nbsp;top: 50%;<br>
+  &nbsp; right: 100%; /* To the left of the tooltip 
+*/<br>&nbsp; margin-top: -5px;<br>&nbsp; 
+border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; 
+border-color: transparent black transparent transparent;<br>}
+</div>
+   <p>Result:</p>
+    <div class="w3-padding w3-white notranslate w3-center">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext-leftarrow">Tooltip text</span>
+      </div>
+    </div>
+<a target="_blank" href="tryit216a.html?filename=trycss_tooltip_arrow_left" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 
-@media screen and (max-width: 992px) {
-  #w3_cert_arrow {
-    display: block;
-  }
-}
+<p>This example demonstrates how to add an arrow to the right of the tooltip:</p>
 
+<div class="w3-example">
+<h3>Right Arrow</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp; position: absolute;<br>
+  &nbsp; top: 50%;<br>&nbsp; left: 100%; /* To the right of the 
+tooltip */<br>&nbsp; margin-top: -5px;<br>&nbsp; 
+border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; 
+border-color: transparent transparent transparent black;<br>}
+</div>
+   <p>Result:</p>
+    <div class="w3-padding w3-white notranslate w3-center">
+      <div class="tooltip">Hover over me
+        <span class="tooltiptext-rightarrow">Tooltip text</span>
+      </div>
+    </div>
+<a target="_blank" href="tryitd840.html?filename=trycss_tooltip_arrow_right" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
 
-@media screen and (max-width: 800px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-  #getdiploma h2 {
-    font-size: 44px;
-  }
-  #getdiploma p {
-    font-size: 30px;
-  }
+<h2>Fade In Tooltips (Animation)</h2>
 
-  #getdiploma a {
-    width: 100%;
-  }
-  #w3_cert_badge {
-    top: -16px;
-    right: -8px;
-    width: 100px;
-  }
-  #getdiploma  {
-    margin-bottom: 55px;
-  }
-}
-</style>
+<p>If you want to fade in the tooltip text when it is about to be visible, you 
+can use the CSS <code class="w3-codespan">transition</code> property together with the <code class="w3-codespan">opacity</code> 
+property, and go from being completely invisible to 100% visible, in a number of specified seconds 
+(1 second in our example):</p>
 
-<div class="w3-panel" id="getdiploma">
-
-<h2>Kickstart your career</h2>
-<p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
-<script>
-var foldername;
-function getCourseFolder() {
-  var pathname = window.location.pathname;
-  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
-  pos = pathname.indexOf("../index.html");
-  foldername = pathname.substr(0, pos);
-  foldername = foldername.toUpperCase();
-  if (foldername == "JS") foldername = "JavaScript";
-  if (foldername == "QUIZTEST") 
-  if (foldername == "QUIZTEST") {
-    document.getElementById("hey").innerText = "a";
-  }
-  if (foldername == "QUIZTEST") foldername = "";
-  if (foldername == "CS") foldername = "C#";
-  if (foldername == "CPP") foldername = "C++";
-  document.getElementById("coursetopic").innerText = foldername;
-}
-getCourseFolder();
-</script>
-<a class="w3-btn w3-margin-bottom" href="../../courses.w3schools.com/index.html" target="_blank"  onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get certified</a>
-
-<svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg id="w3_cert_badge" data-name="w3_cert_badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
-
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+.tooltip .tooltiptext {<br>&nbsp; opacity: 0;<br>&nbsp; 
+transition: opacity 1s;<br>}<br><br>.tooltip:hover 
+.tooltiptext {<br>&nbsp;&nbsp;opacity: 1;<br>}</div>
+<a target="_blank" href="tryite1b9.html?filename=trycss_tooltip_transition" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css3_animations.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css3_images.html">Next &#10095;</a>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@500&amp;display=swap" rel="stylesheet">
@@ -1454,5 +1745,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:42 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_tooltip.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:14:32 GMT -->
 </html>

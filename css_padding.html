@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:38 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_padding.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:10:40 GMT -->
 <head>
-<title>CSS Tutorial</title>
+<title>CSS Padding</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -133,8 +133,7 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
-</head>
-<body>
+</head><body>
 <div class='w3-container top'>
   <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
 
@@ -647,68 +646,57 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>CSS <span class="color_h1">Tutorial</span></h1>
+<h1>CSS <span class="color_h1">Padding</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
-</div>
-
-<div class="w3-panel w3-info intro">
-<div class="w3-row-padding">
-<div class="w3-col w3-hide-small" style="width:140px">
-<p style="margin-top:12px"><b style="position:relative;left:17px;font-size:25px;font-family:Arial Black, Verdana, serif">CSS</b><br>
-<i class="fa fa-css3" style="position:relative;left:-10px;font-size:100px;color:dodgerblue"></i></p>
-</div>
-<div class="w3-rest">
-<p>CSS is the language we use to style an HTML document.</p>
-<p>CSS describes how HTML elements should be displayed.</p>
-<p>This tutorial will teach you CSS from basic to advanced.</p>
-<a class="w3-btn w3-margin-bottom" href="css_intro.html">Start learning CSS now &raquo;</a>
-</div>
-</div>
+<a class="w3-left w3-btn" href="css_margin_collapse.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_dimension.html">Next &#10095;</a>
 </div>
 <hr>
+<p class="intro">Padding is used to create space around an element's content, inside of any defined borders.</p>
+<hr>
 
-<h2>Examples in Each Chapter</h2>
-<p>This CSS tutorial contains hundreds of CSS examples.</p>
-<p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+<div class="w3-theme-border" style="width:100%;padding:70px;border-width:1px;border-style:solid;">
+This element has a padding of 70px.
+</div>
+<br>
+<a target="_blank" href="tryitd3b0.html?filename=trycss_padding_intro" class="w3-btn">Try it Yourself &raquo;</a>
+<hr>
 
+<h2>CSS Padding</h2>
+<p>The CSS <code class="w3-codespan">padding</code> properties are used to generate space around 
+an element's content, inside of any defined borders.</p>
+<p>With CSS, you have full control over the padding. There are properties 
+for setting the padding for each side of an element (top, right, bottom, and left).</p>
+<hr>
+
+<h2>Padding - Individual Sides</h2>
+<p>CSS has properties for specifying the padding for each 
+side of an element:</p>
+<ul>
+<li><code class="w3-codespan">padding-top</code></li>
+<li><code class="w3-codespan">padding-right</code></li>
+<li><code class="w3-codespan">padding-bottom</code></li>
+<li><code class="w3-codespan">padding-left</code></li>
+</ul>
+<p>All the padding properties can have the following values:</p>
+<ul>
+<li><em>length</em> - specifies a padding in px, pt, cm, etc.</li>
+<li><em>%</em> - specifies a padding in % of the width of the containing element</li>
+<li>inherit - specifies that the padding should be inherited from the parent element</li>
+</ul>
+
+<p><b>Note:</b> Negative values are not allowed.</p>
 <div class="w3-example">
-<h3>CSS Example</h3>
+<h3>Example</h3>
+<p>Set different padding for all four sides of a &lt;div&gt; element:&nbsp;&nbsp;</p>
 <div class="w3-code notranslate cssHigh">
-body
-{<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
-<br>h1
-{<br>
-&nbsp;&nbsp;color: white;<br>
-&nbsp;&nbsp;text-align: center;<br>
-}<br><br>
-p
-{<br>
-  &nbsp;
-font-family: verdana;<br>
-&nbsp;&nbsp;font-size: 20px;<br>
-}</div>
-<a target="_blank" href="tryit438d.html?filename=trycss_default" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
-<p><b>Click on the &quot;Try it Yourself&quot; button to see how it works.</b></p>
-
-<hr>
-<h2>CSS Examples</h2>
-<p>Learn from over 300 examples! With our editor, you can edit the CSS, and click on a
-button to view the result.</p>
-<p><a href="css_examples.html">Go to CSS Examples!</a></p>
-
-<hr>
-<h2>Use the Menu</h2>
-<p>We recommend reading this tutorial, in the sequence listed in the menu.</p>
-<p>If you have a large screen, the menu will always be present on the left.</p>
-<p>If you have a small screen, open the menu by clicking the top menu sign <span class="w3-xlarge">&#9776;</span>.</p>
-
-<hr><h2>CSS Templates</h2>
-<p>We have created some responsive W3.CSS templates for you to use.</p>
-<p>You are free to modify, save, share, and use them in all your projects.</p>
-<p><a href="css_rwd_templates.html">Free CSS Templates!</a></p>
-
+  div {<br>&nbsp;
+padding-top: 50px;<br>
+&nbsp;&nbsp;padding-right: 30px;<br>
+&nbsp;&nbsp;padding-bottom: 50px;<br>
+&nbsp;&nbsp;padding-left: 80px;<br>}</div>
+<a target="_blank" href="tryitb587.html?filename=trycss_padding_sides" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
@@ -720,174 +708,170 @@ button to view the result.</p>
 </div>
 <hr>
 
-<h2>CSS Exercises and Quiz Test</h2>
-<p>Test your CSS skills at W3Schools!</p>
-<p><a href="css_exercises.html" class="w3-btn" style="width:200px">Start CSS Exercises!</a></p>
-<p><a href="css_quiz.html" class="w3-btn w3-blue" style="width:200px">Start CSS Quiz!</a></p>
+<h2>Padding - Shorthand Property</h2>
+<p>To shorten the code, it is possible to specify all the padding properties in 
+one property.</p>
+<p>The <code class="w3-codespan">padding</code> property is a shorthand property for the following individual 
+padding properties:</p>
+<ul>
+<li><code class="w3-codespan">padding-top</code></li>
+<li><code class="w3-codespan">padding-right</code></li>
+<li><code class="w3-codespan">padding-bottom</code></li>
+<li><code class="w3-codespan">padding-left</code></li>
+</ul>
 
+<p>So, here is how it works:</p>
+<p>If the <code class="w3-codespan">padding</code> property has four values:</p>
+<ul>
+<li><b>padding: 25px 50px 75px 100px; </b>
+<ul><li>top padding is 25px</li>
+<li>right padding is 50px</li>
+<li>bottom padding is 75px</li>
+<li>left padding is 100px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+  <p>Use the padding shorthand property with four values:</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp;
+  padding: 25px 50px 75px 100px;<br>}</div>
+<a target="_blank" href="tryitc489.html?filename=trycss_padding_shorthand_4val" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<p>If the <code class="w3-codespan">padding</code> property has three values:</p>
+<ul>
+<li><b>padding: 25px 50px 75px;</b><ul>
+<li>top padding is 25px</li>
+<li>right and left paddings are 50px</li>
+<li>bottom padding is 75px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+  <p>Use the padding shorthand property with three values:&nbsp;</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp;
+  padding: 25px 50px 75px;<br>}</div>
+<a target="_blank" href="tryita7ca.html?filename=trycss_padding_shorthand_3val" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<p>If the <code class="w3-codespan">padding</code> property has two values:</p>
+<ul>
+<li><b>padding: 25px 50px;</b><ul><li>top and bottom paddings are 25px</li>
+<li>right and left paddings are 50px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+  <p>Use the padding shorthand property with two values:&nbsp;</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp;
+  padding: 25px 50px;<br>}</div>
+<a target="_blank" href="tryit0e86.html?filename=trycss_padding_shorthand_2val" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<p>If the <code class="w3-codespan">padding</code> property has one value:</p>
+<ul>
+<li><b>padding: 25px;</b><ul><li>all four paddings are 25px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Example</h3>
+  <p>Use the padding shorthand property with one value:&nbsp;</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp;
+  padding: 25px;<br>}</div>
+<a target="_blank" href="tryit9b4c.html?filename=trycss_padding_shorthand_1val" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
 <hr>
-<h2>CSS References</h2>
-<p>At W3Schools you will find complete CSS references of all properties and selectors with syntax, examples, browser support, and more.</p>
-<div style="width:230px">
-<p><a href="../cssref/default.html">CSS Properties Reference</a></p>
-<p><a href="../cssref/css_selectors.html">CSS Selectors Reference</a></p>
-<p><a href="../cssref/css_functions.html">CSS Functions Reference</a></p>
-<p><a href="../cssref/css_animatable.html">CSS Animatable Reference</a></p>
-<p><a href="../cssref/css_ref_aural.html">CSS Aural Reference</a></p>
-<p><a href="../cssref/css_units.html">CSS Units</a></p>
-<p><a href="../cssref/css_colors.html">CSS Color Reference</a></p>
-<p><a href="../cssref/css_default_values.html">CSS Default Values</a></p>
-<p><a href="../cssref/css3_browsersupport.html">CSS Browser Support</a></p>
-</div>
-<br>
 
-<!--
-<hr><h2>CSS Exam - Get Your Diploma!</h2>-->
-<link rel="preconnect" href="https://fonts.gstatic.com/">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&amp;display=swap" rel="stylesheet">
-
-<style>  
-
-#w3_cert_badge {
-  position: absolute;
-  right: 5%;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: -20%;
-}
-
-#w3_cert_arrow {
-  position: absolute;
-  right: 220px;
-  width: 220px;
-  transform: rotate(10deg);
-  bottom: 0;
-  z-index: 1;
-}
-
-#getdiploma {
-  position: relative;
-  padding: 0 60px 50px 60px;
-  margin-bottom: 125px;
-  border-radius: 16px;
-  background-color: #282A35;
-  color: #FFC0C7;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-#getdiploma h2 {
-  font-size:50px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma p {
-  font-size: 42px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Source Sans Pro', sans-serif
-}
-
-#getdiploma a {
-  border-radius: 50px;
-  mxargin-top: 50px;
-  font-size: 18px;
-  background-color: #04AA6D;
-  padding: 17px 55px
-}
-
-#getdiploma a:hover,
-#getdiploma a:active {
-  background-color: #059862 !important;
-}
-
-
-@media screen and (max-width: 1442px) {
-  #w3_cert_arrow {
-    right: 212px;
-    bottom: -15px;
-  }
-}
-
-
-@media screen and (max-width: 1202px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #w3_cert_arrow {
-    display: block;
-  }
-}
-
-
-@media screen and (max-width: 800px) {
-  #w3_cert_arrow {
-    display: none;
-  }
-  #getdiploma h2 {
-    font-size: 44px;
-  }
-  #getdiploma p {
-    font-size: 30px;
-  }
-
-  #getdiploma a {
-    width: 100%;
-  }
-  #w3_cert_badge {
-    top: -16px;
-    right: -8px;
-    width: 100px;
-  }
-  #getdiploma  {
-    margin-bottom: 55px;
-  }
-}
-</style>
-
-<div class="w3-panel" id="getdiploma">
-
-<h2>Kickstart your career</h2>
-<p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
-<script>
-var foldername;
-function getCourseFolder() {
-  var pathname = window.location.pathname;
-  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
-  pos = pathname.indexOf("../index.html");
-  foldername = pathname.substr(0, pos);
-  foldername = foldername.toUpperCase();
-  if (foldername == "JS") foldername = "JavaScript";
-  if (foldername == "QUIZTEST") 
-  if (foldername == "QUIZTEST") {
-    document.getElementById("hey").innerText = "a";
-  }
-  if (foldername == "QUIZTEST") foldername = "";
-  if (foldername == "CS") foldername = "C#";
-  if (foldername == "CPP") foldername = "C++";
-  document.getElementById("coursetopic").innerText = foldername;
-}
-getCourseFolder();
-</script>
-<a class="w3-btn w3-margin-bottom" href="../../courses.w3schools.com/index.html" target="_blank"  onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get certified</a>
-
-<svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg id="w3_cert_badge" data-name="w3_cert_badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">1</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
-
+<h2>Padding and Element Width</h2>
+<p>The CSS <code class="w3-codespan">width</code> property specifies the width of the element's content area. The 
+content area is the portion inside the padding, border, and margin of an element 
+(<a href="css_boxmodel.html">the box model</a>).</p>
+<p>So, if an element has a specified width, the padding added to that element will 
+be added to the total width of the element. This is often an undesirable result.</p>
+<div class="w3-example">
+<h3>Example</h3>
+<p>Here, the &lt;div&gt; element is given a width of 300px. 
+However, the actual width of the &lt;div&gt; element will be 350px (300px + 
+25px of left padding + 25px of right padding):</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp;&nbsp;width: 300px;<br>&nbsp;&nbsp;padding: 25px;<br>}</div>
+<a target="_blank" href="tryitc855.html?filename=trycss_padding_width" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
+<p>To keep the width at 300px, no matter the amount of padding, you can use the <code class="w3-codespan">
+box-sizing</code> property. This causes the element to maintain its width; if 
+you increase the padding, the available content space will decrease.</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <p>Use the box-sizing property to keep the width at 300px, no matter the 
+  amount of padding:</p>
+<div class="w3-code notranslate cssHigh">
+  div {<br>&nbsp; width: 300px;<br>&nbsp;&nbsp;padding: 25px;<br>&nbsp;&nbsp;box-sizing: border-box;<br>}</div>
+<a target="_blank" href="tryit2534.html?filename=trycss_padding_width2" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>More Examples</h2>
+
+<p><a target="_blank" href="tryite883.html?filename=trycss_padding-left">Set the left padding</a><br>
+This example demonstrates how to set the left padding of a &lt;p&gt; element.</p>
+
+<p><a target="_blank" href="tryita159.html?filename=trycss_padding-right">Set the right padding</a><br>
+This example demonstrates how to set the right padding of a &lt;p&gt; element.</p>
+
+<p><a target="_blank" href="tryit6b9f.html?filename=trycss_padding-top">Set the top padding</a><br>
+This example demonstrates how to set the top padding of a &lt;p&gt; element.</p>
+
+<p><a target="_blank" href="tryit3989.html?filename=trycss_padding-bottom">Set the bottom padding</a><br>
+This example demonstrates how to set the bottom padding of a &lt;p&gt; element.</p>
+<hr>
+
+<div class="w3-container w3-dark-grey w3-padding">
+  <h2>Test Yourself with Exercises!</h2>
+  <div class="w3-bar w3-margin-bottom">
+    <a class="w3-bar-item w3-btn" href="exercisee955.html?filename=exercise_padding1" target="_blank">Exercise 1 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercise59cd.html?filename=exercise_padding2" target="_blank">Exercise 2 &raquo;</a>
+    <a class="w3-bar-item w3-btn" href="exercisec41c.html?filename=exercise_padding3" target="_blank">Exercise 3 &raquo;</a>
+  </div>
+</div>
+<hr>
+
+<h2>All CSS Padding Properties</h2>
+
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:30%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding.html">padding</a></td>
+    <td>A shorthand property for setting all the padding properties in one declaration</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-bottom.html">padding-bottom</a></td>
+    <td>Sets the bottom padding of an element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-left.html">padding-left</a></td>
+    <td>Sets the left padding of an element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-right.html">padding-right</a></td>
+    <td>Sets the right padding of an element</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-top.html">padding-top</a></td>
+    <td>Sets the top padding of an element</td>
+  </tr>
+</table>
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="../default.html">&#10094; Home</a>
-<a class="w3-right w3-btn" href="css_intro.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="css_margin_collapse.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="css_dimension.html">Next &#10095;</a>
 </div>
 <link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@500&amp;display=swap" rel="stylesheet">
@@ -1454,5 +1438,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 11:34:42 GMT -->
+<!-- Mirrored from www.w3schools.com/css/css_padding.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Apr 2021 12:10:40 GMT -->
 </html>
